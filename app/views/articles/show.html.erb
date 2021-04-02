@@ -1,2 +1,7 @@
-<h1><%= @article.title %></h1>
-<p><%= @article.body %></p>
+<div>
+    <h1><%= @article.title %></h1>
+    <p><%= @article.body %></p>
+</div>
+<div>
+    <%= link_to "Actualizar", edit_article_path(@article), method: :update %>
+</div>

@@ -1,14 +1,2 @@
 <h1 class="text-l flex flex-auto justify-center mt-5">Create your article</h1>
-
-<%= form_for( @article) do |f| %>
-    <% @article.errors.full_messages.each do |message| %>
-        <div>
-            *<%= message %>
-        </div>
-    <%end%>
-    <div class="flex flex-col justify-center space-y-5 m-40 mt-12">
-    <%= f.text_field :title, placeholder:"Title", class:"border-none" %> 
-    <%= f.text_area :body, placeholder:"Write here your article", class:"border-none" %> 
-    <%= f.submit "Save" %>
-    </div>
-<% end %>
+<%= render "form" %>

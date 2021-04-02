@@ -12,15 +12,11 @@
   </head>
 
   <body class="font-mono">
+    
 <!-- component -->
-  <nav class="font-mono flex flex-col text-center sm:flex-row sm:text-left sm:justify-between py-4 px-6 bg-white shadow sm:items-baseline w-full">
-    <div class="mb-2 sm:mb-0">
-      <a class="text-lg no-underline text-grey-darkest hover:text-blue-dark"><%= link_to "Blog", root_path %></a>
-      <a class="text-lg no-underline text-grey-darkest hover:text-blue-dark ml-2">Design</a>
-      <a class="text-lg no-underline text-grey-darkest hover:text-blue-dark ml-2">Development</a>
-      <a class="text-lg no-underline text-grey-darkest hover:text-blue-dark ml-2">Technology</a>
-    </div>
-  </nav>
+  <%= render "partials/navigation" %>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
 </html>
