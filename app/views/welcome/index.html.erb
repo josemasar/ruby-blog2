@@ -1,3 +1,8 @@
+<% if user_signed_in? %>
 <h1 class="text-3xl">Bienvenido <%= current_user.email %></h1>
+<% else %>
+<h1 class="text-3xl">Bienvenido al Blog</h1>
+<p>Por favor, inicia sesión o regístrate</p>
+<% end %>
 
 
