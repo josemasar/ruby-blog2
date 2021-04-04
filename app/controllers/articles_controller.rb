@@ -7,6 +7,7 @@ class ArticlesController < ApplicationController
     def show
       @article = Article.find(params[:id])
       @article.update_visits_count
+      @comment = Comment.new
     end
 
     def new
