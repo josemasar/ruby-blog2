@@ -1,10 +1,12 @@
 class ArticlesController < ApplicationController
+  before_action :authenticate_user!, only: [:create, :new]
     def index
       @articles = Article.all
     end
 
     def show
       @article = Article.find(params[:id])
+      @article.update_visits_count
     end
 
     def new
