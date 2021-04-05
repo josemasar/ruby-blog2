@@ -1,9 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<h1>
   <strong>Name:</strong>
   <%= @category.name %>
-</p>
+</h1>
+<div>
+    <% @category.articles.each do |article| %>
+    <h3><%= link_to article.title, article %></h3>
+    <div>
+    <%= article.body %> - <%= link_to "Eliminar", article, method: :delete %>
+    </div>
+    <% end %>
+</div>
 
 <p>
   <strong>Color:</strong>

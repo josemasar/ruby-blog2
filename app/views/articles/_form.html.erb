@@ -7,6 +7,10 @@
     <div class="flex flex-col justify-center space-y-5 m-40 mt-12">
     <%= f.text_field :title, placeholder:"Title", class:"border-none" %> 
     <%= f.text_area :body, placeholder:"Write here your article", class:"border-none" %> 
+    <label>Categorías</label>
+    <% @categories.each do |category| %>
+    <%= check_box_tag "categories[]", category.id %> <%= category.name %>
+    <% end %>
     <%= f.submit "Save" %>
     </div>
 <% end %>
